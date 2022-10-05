@@ -52,7 +52,7 @@ a {
   position: relative;
   z-index: 3;
 }
-.header__logo{
+.header__logo {
   font-size: 24px;
   font-weight: 700;
 }
@@ -83,7 +83,7 @@ a {
   top: 4px;
 }
 
-.header-hero{
+.header-hero {
   max-width: 540px;
   padding-top: 100px;
   padding-bottom: 130px;
@@ -94,7 +94,7 @@ a {
   line-height: 59px;
   width: 540px;
 }
-.header-hero__paragraph{
+.header-hero__paragraph {
   margin: 17px 0 60px 0;
   font-weight: 400;
   font-size: 20px;
@@ -147,7 +147,7 @@ a {
   min-width: 203px;
   min-height: 43px;
 }
-.about-salon__text{
+.about-salon__text {
   max-width: 500px;
 }
 .about-salon__title {
@@ -156,7 +156,7 @@ a {
   line-height: 59px;
   min-width: max-content;
 }
-.about-salon__description{
+.about-salon__description {
   width: 565px;
   font-weight: 400;
   font-size: 20px;
@@ -215,7 +215,7 @@ a {
   font-weight: 600;
   font-size: 18px;
 }
-.salon-advantages__desc{
+.salon-advantages__desc {
   font-weight: 400;
   font-size: 14px;
   text-align: center;
@@ -260,7 +260,7 @@ a {
   font-size: 12px;
   margin-top: 16px;
 }
-.price-header__title{
+.price-header__title {
   font-weight: 700;
   font-size: 48px;
   line-height: 59px;
@@ -312,6 +312,78 @@ a {
   font-size: 20px;
   color: #00bf78;
 }
+.masters-header {
+  padding: 40px 0 0 0;
+}
+.masters-header__title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 59px;
+  width: 540px;
+}
+.masters-header__subtitle {
+  margin-top: 30px;
+}
+.masters {
+  background: #f8f6f7;
+}
+
+.masters-inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+.masters-inner__item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.make-appointment__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 73.5%;
+  cursor: pointer;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+.make-appointment__link {
+  position: absolute;
+  top: 134px;
+  left: 82px;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  max-width: 90px;
+}
+.masters-inner__item:hover .make-appointment__hover {
+  display: block;
+}
+.masters-inner__desc {
+  margin-top: 20px;
+  line-height: 28px;
+  padding: 0 0 40px 0;
+}
+.masters-inner__title {
+  font-weight: 600;
+  font-size: 18px;
+}
+.masters-inner__subtitle {
+  font-weight: 400;
+  font-size: 14px;
+}
+.masters-inner__experience {
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -328,7 +400,7 @@ a {
   font-size: 12px;
   line-height: 15px;
 }
-.footer-content__reserved{
+.footer-content__reserved {
   font-size: 12px;
   position: relative;
   top: 3px;
