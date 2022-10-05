@@ -56,14 +56,14 @@ a {
   font-size: 24px;
   font-weight: 700;
 }
-.navifation__link {
+.navigation__link {
   font-size: 14px;
   font-weight: 500;
   padding: 0 20px 0 0;
   transition: 0.15s color;
 }
 
-.navifation__link:hover {
+.navigation__link:hover {
   color: #00bf78;
 }
 .header-phone {
@@ -272,16 +272,16 @@ a {
   gap: 40px;
   margin-top: 30px;
 }
-.navigation__link {
+.price-header__link {
   white-space: pre;
 }
-.navigation__link:first-child {
+.price-header__link:first-child {
   color: #00bf78;
   border-bottom: 2px solid #00bf78;
   cursor: pointer;
   transition: 0.2s color;
 }
-.navigation__link:hover {
+.price-header__link:hover {
   color: #00bf78;
   cursor: pointer;
   transition: 0.2s color;
