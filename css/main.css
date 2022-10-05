@@ -44,7 +44,7 @@ a {
 .header .container {
   position: relative;
 }
-.header-top {
+.header__top {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -52,30 +52,30 @@ a {
   position: relative;
   z-index: 3;
 }
-.logo {
+.header__logo{
   font-size: 24px;
   font-weight: 700;
 }
-.navigation a {
+.navifation__link {
   font-size: 14px;
   font-weight: 500;
   padding: 0 20px 0 0;
   transition: 0.15s color;
 }
 
-.navigation a:hover {
+.navifation__link:hover {
   color: #00bf78;
 }
-.phone-info {
+.header-phone {
   display: flex;
   flex-direction: column;
 }
-.phone-number {
+.header-phone__number {
   font-weight: 500;
   font-size: 18px;
   text-align: center;
 }
-.phone-time {
+.header-phone__time {
   font-size: 11px;
   text-indent: -20px;
   text-align: end;
@@ -83,18 +83,18 @@ a {
   top: 4px;
 }
 
-.header-hero {
+.header-hero{
   max-width: 540px;
   padding-top: 100px;
   padding-bottom: 130px;
 }
-.hero-title {
+.header-hero__title {
   font-weight: 600;
   font-size: 48px;
   line-height: 59px;
   width: 540px;
 }
-.hero-paragraph {
+.header-hero__paragraph{
   margin: 17px 0 60px 0;
   font-weight: 400;
   font-size: 20px;
@@ -147,40 +147,40 @@ a {
   min-width: 203px;
   min-height: 43px;
 }
-.section-header {
+.about-salon__text{
   max-width: 500px;
 }
-.section-title {
+.about-salon__title {
   font-weight: 700;
   font-size: 48px;
   line-height: 59px;
   min-width: max-content;
 }
-.section-description {
+.about-salon__description{
   width: 565px;
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
   margin-top: 30px;
 }
-.section-invitation {
+.about-salon__invitation {
   width: 538px;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   margin-top: 16px;
 }
-.section-video {
+.about-salon__video {
   display: flex;
   position: absolute;
   top: 85px;
   right: 15px;
 }
-.video-salon {
+.about-salon__inner {
   position: relative;
 }
 
-.video-inner {
+.about-salon__item {
   position: absolute;
   top: 35%;
   left: 30%;
@@ -189,7 +189,7 @@ a {
   align-items: center;
   gap: 5px;
 }
-.video-inner span {
+.about-salon__desc {
   font-weight: 500;
   font-size: 16px;
   color: #ffffff;
@@ -201,21 +201,21 @@ a {
   gap: 8%;
   margin-top: 8em;
 }
-.advantages-item {
+.salon-advantages__item {
   width: 296px;
   text-align: center;
 }
-.advantages-item img {
+.salon-advantages__img {
   display: block;
   margin: 0 auto;
 }
-.advantages-item span {
+.salon-advantages__title {
   position: relative;
   top: 30px;
   font-weight: 600;
   font-size: 18px;
 }
-.advantages-item p {
+.salon-advantages__desc{
   font-weight: 400;
   font-size: 14px;
   text-align: center;
@@ -225,78 +225,85 @@ a {
   width: 250px;
 }
 
-.services-heading {
+.services-header__title {
   font-weight: 700;
   font-size: 48px;
   line-height: 59px;
+  min-width: max-content;
 }
-.services-inner {
+.services__inner {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 30px;
 }
-.services-item:nth-last-child(-n + 2) {
+.services__item:nth-last-child(-n + 2) {
   padding-top: 44px;
 }
-.services-item {
+.services__item {
   max-width: 350px;
   min-height: 300px;
 }
-.services-text {
+.services__text {
   padding: 20px 0 0 0;
 }
-.services-desc {
+.services__desc {
   padding-top: 8px;
   font-weight: 400;
   line-height: 20px;
   max-width: 330px;
   font-size: 12px;
 }
-.services-btn {
+.services__btn {
   min-width: 112px;
   min-height: 34px;
   font-size: 12px;
   margin-top: 16px;
 }
-.navigation-services {
+.price-header__title{
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  min-width: max-content;
+}
+.price-header__navigation {
   display: flex;
   flex-direction: row;
   gap: 40px;
   margin-top: 30px;
 }
-.navigation-services a {
+.navigation__link {
   white-space: pre;
 }
-.navigation-services a:first-child {
+.navigation__link:first-child {
   color: #00bf78;
   border-bottom: 2px solid #00bf78;
   cursor: pointer;
   transition: 0.2s color;
 }
-.navigation-services a:hover {
+.navigation__link:hover {
   color: #00bf78;
   cursor: pointer;
   transition: 0.2s color;
 }
-.table-inner {
+.price-table {
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
 }
-.table-item {
+.price-table__item {
   min-width: 440px;
   min-height: 50px;
   margin: 30px 0;
 }
-.table-title {
+.price-table__title {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   display: flex;
   justify-content: space-between;
 }
-.table-desc {
+.price-table__desc {
   font-weight: 400;
   font-size: 14px;
 }
@@ -305,7 +312,7 @@ a {
   font-size: 20px;
   color: #00bf78;
 }
-footer {
+.footer {
   display: flex;
   justify-content: space-between;
   flex: 0 0 auto;
@@ -316,24 +323,24 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-.footer-title {
+.footer-content__title {
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
 }
-.reserved {
+.footer-content__reserved{
   font-size: 12px;
   position: relative;
   top: 3px;
   color: #278aff;
   text-decoration: underline;
 }
-.footer-navigation a {
+.footer-navigation__link {
   font-size: 12px;
   font-weight: 500;
   padding: 0 20px 0 0;
 }
-.footer-navigation a:hover {
+.footer-navigation__link:hover {
   color: #00bf78;
   transition: 0.15s color;
 }
