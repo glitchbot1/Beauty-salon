@@ -114,6 +114,7 @@
     }
     .masters-inner {
       flex-flow: wrap;
+      justify-content: space-evenly;
     }
     .masters-inner__item {
       max-width: 256px;
@@ -121,6 +122,9 @@
     .masters-inner__desc {
       margin-top: 0;
       text-align: center;
+    }
+    .make-appointment__hover{
+      height: 78%;
     }
   }
   @media (min-width: 347px) and (max-width: 480px) {
