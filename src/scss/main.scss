@@ -128,11 +128,7 @@
   &__text {
     max-width: 500px;
   }
-  &__title {
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 59px;
-  }
+
   &__description {
     width: 565px;
     font-weight: 400;
@@ -205,12 +201,6 @@
   width: 250px;
 }
 
-.services-header__title {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 59px;
-  min-width: max-content;
-}
 .services__inner {
   display: flex;
   flex-wrap: wrap;
@@ -243,12 +233,6 @@
   }
 }
 .price-header {
-  &__title {
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 59px;
-    min-width: max-content;
-  }
   &__navigation {
     display: flex;
     flex-direction: row;
@@ -306,12 +290,6 @@
 }
 
 .masters-header {
-  &__title {
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 59px;
-    width: 540px;
-  }
   &__subtitle {
     margin-top: 30px;
   }
@@ -374,7 +352,101 @@
 .masters-inner__item:hover .make-appointment__hover {
   display: block;
 }
+.portfolio-header {
+  position: relative;
+}
 
+.portfolio-header__arrows {
+  right: 0;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  top: 40px;
+
+  &::after {
+    content: "";
+    background-image: url("../images/arrow-right.png");
+    width: 18px;
+    height: 16px;
+    position: absolute;
+    right: 30px;
+  }
+  &::before {
+    content: "";
+    background-image: url("../images/arrow-left.png");
+    width: 18px;
+    height: 16px;
+    position: absolute;
+  }
+  &:hover {
+    background: #f8f6f7;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+  }
+}
+
+.portfolio-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 50px;
+  overflow: hidden;
+}
+.portfolio-inner__item {
+  width: 338px;
+  height: 338px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+
+  &::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+  &::after {
+    content: "Увеличить";
+    background: url(../images/search.png) no-repeat;
+    padding-top: 50px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    height: 15%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 13%;
+    transform: translate(-50%, -50%);
+  }
+  // &:hover  {
+  //   display: block;
+  // }
+}
+.brands__subtitle{
+  padding: 100px 0 42px 0;
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.brands-inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  opacity: 0.35;
+}
+.contacts{
+  background: #F8F6F7;
+  
+}
+.contacts-inner{
+  display: flex;
+}
 .footer {
   display: flex;
   justify-content: space-between;
