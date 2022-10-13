@@ -378,7 +378,6 @@
     height: 16px;
     position: absolute;
   }
-
 }
 
 .portfolio-inner {
@@ -448,6 +447,8 @@
   &__info {
     position: relative;
     top: 40px;
+    max-width: 360px;
+    max-height: 275px;
   }
   &__connection {
     display: flex;
