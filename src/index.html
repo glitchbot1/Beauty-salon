@@ -290,7 +290,10 @@
         <div class="container">
           <div class="portfolio-header">
             <h2 class="portfolio-header__title header-title ">Наши работы</h2>
-            <a class="portfolio-header__arrows"></a>
+            <div class="portfolio-header__arrows">
+              <a class="portfolio-header__arrows portfolio-header__arrows-link portfolio-header__arrows_hover"><img class="portfolio-header__arrows-img" src="images/arrow-right.png" alt=""></a> 
+              <a class="portfolio-header__arrows portfolio-header__arrows-link portfolio-header__arrows_hover"><img class="portfolio-header__arrows-img" src="images/arrow-left.png" alt=""></a> 
+            </div>
           </div>
         </div>
         <div class="portfolio-inner">
@@ -356,8 +359,8 @@
                 <p class="contacts-form__subtitle">Наш менеджер перезвонит в течение нескольких минут, уточнит
                   подробности и согласует время.
                 </p>
-                <input class="contacts-form__input" type="text" placeholder="Ваше имя">
-                <input class="contacts-form__input" type="text" placeholder="+7 (___) ___-__-__">
+                <input class="contacts-form__input" type="text" placeholder="Ваше имя" required>
+                <input class="contacts-form__input" type="tel" placeholder="+7 (___) ___-__-__" required>
                 <button class="contacts-form__btn btn">Записаться</button>
               </form>
               <p class="contacts-form__personal-data">Нажимая на кнопку вы соглашаетесь с <a class="contacts-form__link"

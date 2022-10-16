@@ -353,33 +353,35 @@
   display: block;
 }
 .portfolio-header {
+  display: flex;
   position: relative;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .portfolio-header__arrows {
-  right: 0;
-  position: absolute;
   display: flex;
-  align-items: flex-end;
-  top: 40px;
+  justify-content: space-between;
 
-  &::after {
-    content: "";
-    background-image: url("../images/arrow-right.png");
-    width: 18px;
-    height: 16px;
-    position: absolute;
-    right: 30px;
+  &-link {
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
   }
-  &::before {
-    content: "";
-    background-image: url("../images/arrow-left.png");
-    width: 18px;
-    height: 16px;
-    position: absolute;
+  &_hover:hover {
+    border-radius: 100%;
+    background: #f8f6f7;
+    width: 40px;
+    height: 40px;
+  }
+
+  &-img {
+    width: 15px;
+    height: 15px;
   }
 }
-
 .portfolio-inner {
   display: flex;
   flex-direction: row;
@@ -392,7 +394,7 @@
   position: relative;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: top 0.2s;
 
   &::before {
     content: "";
@@ -403,6 +405,7 @@
     bottom: 5px;
     top: 0;
     border-radius: 10px;
+    display: none;
   }
 
   &::after {
@@ -418,14 +421,19 @@
     top: 50%;
     width: 13%;
     transform: translate(-50%, -50%);
+    display: none;
   }
-  &:hover {
-    transform: scale(1.2);
-    width: 338px;
-    height: 338px;
-    border-radius: 8px;
+  &:hover::before {
+    display: block;
+  }
+  &:hover::after {
+    display: block;
   }
 }
+.portfolio-inner__item:hover {
+  top: -20px;
+}
+
 .brands__subtitle {
   padding: 100px 0 42px 0;
   text-align: center;
@@ -444,6 +452,7 @@
 }
 .contacts-inner {
   display: flex;
+  justify-content: space-between;
   &__info {
     position: relative;
     top: 40px;
