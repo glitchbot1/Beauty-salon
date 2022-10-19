@@ -7,7 +7,8 @@
   }
   .header__hamb {
     position: absolute;
-    top: 7%;
+    top: 45%;
+    cursor: pointer;
   }
   .hamb__inner {
     width: 40px;
@@ -16,29 +17,31 @@
     background: gray;
     position: absolute;
     border-radius: 5px;
+
+    &::after {
+      content: " ";
+      width: 40px;
+      height: 5px;
+      border: 1px solid gray;
+      background: gray;
+      border-radius: 5px;
+      position: absolute;
+      top: 10px;
+      right: -1px;
+    }
+    &::before {
+      content: " ";
+      width: 40px;
+      height: 5px;
+      border: 1px solid gray;
+      background: gray;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 10px;
+      right: -1px;
+    }
   }
-  .hamb__inner::after {
-    content: " ";
-    width: 40px;
-    height: 5px;
-    border: 1px solid gray;
-    background: gray;
-    border-radius: 5px;
-    position: absolute;
-    top: 10px;
-    right: -1px;
-  }
-  .hamb__inner::before {
-    content: " ";
-    width: 40px;
-    height: 5px;
-    border: 1px solid gray;
-    background: gray;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 10px;
-    right: -1px;
-  }
+
   .header__logo {
     position: relative;
     left: 9%;
@@ -48,17 +51,13 @@
   }
   .header-hero {
     margin: 0 auto;
-  }
-  .header-hero__title {
-    text-align: center;
-  }
-  .header-hero__paragraph {
-    text-align: center;
-  }
-  .btn__mobile {
-    display: block;
-    margin: 0 auto;
-    font-size: 17px;
+
+    &__title {
+      text-align: center;
+    }
+    &__paragraph {
+      text-align: center;
+    }
   }
   .header-icon {
     flex-direction: row;
@@ -67,6 +66,11 @@
     right: 42%;
     bottom: 10%;
     position: absolute;
+  }
+  .btn__mobile {
+    display: block;
+    margin: 0 auto;
+    font-size: 17px;
   }
 
   .about-salon__title {
@@ -88,23 +92,26 @@
     align-items: center;
     flex-direction: column;
     margin-top: 8em;
+
+    &__item {
+      padding: 20px 0;
+    }
   }
-  .salon-advantages__item {
-    padding: 20px 0;
-  }
+
   .services__item:nth-last-child(-n + 2) {
     padding-top: 0;
   }
   .price-table {
     flex-direction: row;
+    &__title {
+      justify-content: flex-start;
+      gap: 2%;
+    }
+    &__mobile {
+      flex-direction: column;
+    }
   }
-  .price-table__title {
-    justify-content: flex-start;
-    gap: 2%;
-  }
-  .price-table__mobile {
-    flex-direction: column;
-  }
+
   .price-header__navigation {
     gap: 16px;
   }
@@ -115,34 +122,34 @@
   .masters-inner {
     flex-flow: wrap;
     justify-content: space-evenly;
+
+    &__item {
+      max-width: 256px;
+    }
+    &__desc {
+      margin-top: 0;
+      text-align: center;
+    }
   }
-  .masters-inner__item {
-    max-width: 256px;
-  }
-  .masters-inner__desc {
-    margin-top: 0;
-    text-align: center;
-  }
+
   .make-appointment__hover {
     height: 78%;
   }
   .portfolio-inner {
-
-    
-    &__item{
+    &__item {
       margin: 0 auto;
     }
   }
-  .portfolio-header__arrows{
+  .portfolio-header__arrows {
     right: 60px;
   }
-  .brands-inner{
+  .brands-inner {
     justify-content: space-around;
-    &__item{
+    &__item {
       margin: 0 -20px;
     }
   }
-  .contacts-form{
+  .contacts-form {
     position: relative;
     right: 70px;
   }
@@ -161,7 +168,9 @@
   }
   .header__hamb {
     position: absolute;
-    top: 6%;
+    top: 30%;
+    left: 0;
+    z-index: 2;
   }
   .hamb__inner {
     width: 40px;
@@ -195,16 +204,38 @@
   }
   .header-hero {
     padding-top: 30px;
+
+    &__title {
+      text-align: center;
+      max-width: 100%;
+      font-size: 45px;
+      display: block;
+      margin: 0 auto;
+    }
+    &__paragraph {
+      text-align: center;
+    }
   }
-  .header-hero__title {
-    text-align: center;
-    max-width: 100%;
-    font-size: 45px;
-    display: block;
-    margin: 0 auto;
+
+  .header-phone__time {
+    z-index: -1;
   }
-  .header-hero__paragraph {
-    text-align: center;
+  .header__nav {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .navigation__link {
+    position: relative;
+    top: 15%;
+    margin: 0px 15px;
+    font-size: 25px;
+
   }
   .btn__mobile {
     display: block;
@@ -219,36 +250,40 @@
     bottom: 8%;
     position: absolute;
   }
-  .about-salon__video {
-    position: relative;
+  .about-salon {
+    &__video {
+      position: relative;
+    }
+    &__description {
+      width: 335px;
+      font-size: 19px;
+      line-height: 26px;
+    }
+    &__invitation {
+      width: 330px;
+      font-size: 16px;
+    }
+    &__image {
+      max-width: 300px;
+    }
+    &__inner {
+      left: 15px;
+      bottom: 59px;
+    }
+    &__item {
+      top: 24%;
+      left: 20%;
+    }
   }
-  .about-salon__description {
-    width: 335px;
-    font-size: 19px;
-    line-height: 26px;
-  }
-  .about-salon__invitation {
-    width: 330px;
-    font-size: 16px;
-  }
-  .aboit-salon__image {
-    max-width: 300px;
-  }
-  .about-salon__inner {
-    left: 15px;
-    bottom: 59px;
-  }
-  .about-salon__item {
-    top: 24%;
-    left: 20%;
-  }
+
   .salon-advantages {
     flex-direction: column;
     align-items: center;
+    &__item {
+      margin: 20px 0;
+    }
   }
-  .salon-advantages__item {
-    margin: 20px 0;
-  }
+
   .services-header__title {
     font-size: 30px;
   }
@@ -263,45 +298,49 @@
   }
   .price-table {
     flex-direction: column;
+
+    &__title {
+      justify-content: flex-start;
+      gap: 3%;
+    }
+    &__mobile{
+      flex-direction: column;
+    }
   }
-  .price-table__title {
-    justify-content: flex-start;
-    gap: 3%;
-  }
-  .price-table__mobile {
-    flex-direction: column;
-  }
+ 
   .masters-inner {
     flex-direction: column;
     align-items: center;
+
+    &__item{
+      margin: 10px;
+    }
+    &__desc{
+      text-align: center;
+    }
   }
-  .masters-inner__item {
-    margin: 10px;
-  }
-  .masters-inner__desc {
-    text-align: center;
-  }
-  .portfolio-header__arrows{
+ 
+  .portfolio-header__arrows {
     right: 20px;
     top: 85px;
   }
-  .brands-inner{
+  .brands-inner {
     display: flex;
     flex-direction: column;
     gap: 30px;
     align-items: center;
   }
-  .contacts-inner{
+  .contacts-inner {
     flex-wrap: wrap;
     gap: 55px;
   }
-  .contacts-form{
+  .contacts-form {
     max-width: 338px;
 
-    &__input{
+    &__input {
       width: 267px;
     }
-    &__btn{
+    &__btn {
       width: 265px;
     }
   }

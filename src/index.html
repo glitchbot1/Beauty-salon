@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script  src="js/main.js"></script>
   <title>Мир красоты</title>
 </head>
 
@@ -18,13 +21,13 @@
 
     <header class="header">
       <div class="container">
-        <button id="mobile-menu-btn" class="hamb header__hamb">
-          <div class="hamb__inner"></div>
-        </button>
-        <div class="header__top">
-          <a href="/" class=" header__logo logo">Мир красоты</a>
 
-          <nav class="navigation header__nav">
+        <div class="header__top">
+          <div class="header__hamb">
+            <span class="hamb__inner"></span>
+          </div>
+          <a href="/" class=" header__logo logo">Мир красоты</a>
+          <nav class="navigation header__nav ">
             <a class="navigation__link" href="#services">Услуги и цены</a>
             <a class="navigation__link" href="#masters">Мастера</a>
             <a class="navigation__link" href="#portfolio">Наши работы</a>
@@ -77,7 +80,7 @@
           </div>
           <div class="about-salon__video">
             <div class="about-salon__inner">
-              <img class="aboit-salon__image" src="./images/./beaty-world.png" alt="Короткое видео о нас">
+              <img class="about-salon__image" src="./images/./beaty-world.png" alt="Короткое видео о нас">
               <div class="about-salon__item">
                 <div><img src="./images/./icon-play.svg" alt="Короткое видео о нас"> </div>
                 <span class="about-salon__desc">Короткое видео о нас</span>
@@ -228,7 +231,7 @@
         </div>
       </section>
 
-      <section id="services" class="masters">
+      <section id="masters" class="masters">
         <div class="container">
           <div class="masters-header">
             <h2 class="masters-header__title header-title">Мастера</h2>
@@ -286,13 +289,15 @@
         </div>
       </section>
 
-      <section id="services" class="portfolio">
+      <section id="portfolio" class="portfolio">
         <div class="container">
           <div class="portfolio-header">
             <h2 class="portfolio-header__title header-title ">Наши работы</h2>
             <div class="portfolio-header__arrows">
-              <a class="portfolio-header__arrows portfolio-header__arrows-link portfolio-header__arrows_hover"><img class="portfolio-header__arrows-img" src="images/arrow-right.png" alt="Левая стрелка"></a> 
-              <a class="portfolio-header__arrows portfolio-header__arrows-link portfolio-header__arrows_hover"><img class="portfolio-header__arrows-img" src="images/arrow-left.png" alt="Правая стрелка"></a> 
+              <a class="portfolio-header__arrows portfolio-header__arrows-link portfolio-header__arrows_hover"><img
+                  class="portfolio-header__arrows-img" src="images/arrow-right.png" alt="Левая стрелка"></a>
+              <a class="portfolio-header__arrows portfolio-header__arrows-link portfolio-header__arrows_hover"><img
+                  class="portfolio-header__arrows-img" src="images/arrow-left.png" alt="Правая стрелка"></a>
             </div>
           </div>
         </div>
@@ -335,7 +340,7 @@
 
       </section>
 
-      <section id="services" class="contacts">
+      <section id="contacts" class="contacts">
         <div class="container">
           <div class="contacts-inner">
             <div class="contacts-inner__info">
@@ -389,6 +394,7 @@
     </footer>
   </div>
   </div>
+
 </body>
 
 </html>

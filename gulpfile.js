@@ -49,6 +49,13 @@ function buildHtml() {
     .pipe(browserSync.stream());
 }
 
+// function buildJs(){
+//     return gulp.src([
+//         'node_modules/slick-carousel/slick/slick.js'
+//       ])
+//     .pipe(dest('src/js'))
+//     .pipe(browserSync.stream());
+// }
 
 function copy() {
     return src(['src/images/**/*.*'])
@@ -74,6 +81,7 @@ function createDevServer() {
 
 exports.sass = buildSass;
 exports.html = buildHtml;
+// exports.html = buildJs;
 exports.copy = copy;
 
 exports.build = series(cleanDist, parallel(buildSass, buildHtml, copy));
