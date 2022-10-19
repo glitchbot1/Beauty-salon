@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./css/main.css" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script  src="js/main.js"></script>
+
   <title>Мир красоты</title>
 </head>
 
@@ -359,13 +359,13 @@
               </div>
             </div>
             <div class="contacts-form">
-              <form action="">
+              <form id="record-form" action="/data" method="POST">
                 <h3 class="contacts-form__title">Быстрая запись</h3>
                 <p class="contacts-form__subtitle">Наш менеджер перезвонит в течение нескольких минут, уточнит
                   подробности и согласует время.
                 </p>
-                <input class="contacts-form__input" type="text" placeholder="Ваше имя" required>
-                <input class="contacts-form__input" type="tel" placeholder="+7 (___) ___-__-__" required>
+                <input class="contacts-form__input" name="name" id="name" type="text" placeholder="Ваше имя" required>
+                <input class="contacts-form__input" name="tel" id="tel" type="tel" placeholder="+7 (___) ___-__-__" required>
                 <button class="contacts-form__btn btn">Записаться</button>
               </form>
               <p class="contacts-form__personal-data">Нажимая на кнопку вы соглашаетесь с <a class="contacts-form__link"
@@ -394,7 +394,7 @@
     </footer>
   </div>
   </div>
-
+  <script  src="js/main.js" defer></script>
 </body>
 
 </html>
