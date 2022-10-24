@@ -99,6 +99,9 @@ function chengeContent(index) {
 }
 
 //Меню бургер
+const mobileNav = document.querySelector(".header__nav");
+mobileNav.style.display = "none";
+
 $(document).ready(function () {
   $(".hamb__inner").click(function (event) {
     $(".header__nav").toggle();

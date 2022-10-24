@@ -47,13 +47,13 @@
     background-color: $white;
     width: 100vw;
     height: 100vh;
-    top: 0;
+    top:0;
     position: absolute;
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
-  .navigation__link {
+  .navigation__link{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -65,7 +65,7 @@
     padding: 0 20px 0 0;
     transition: 0.15s color;
   }
-  .header-phone__time {
+  .header-phone__time{
     z-index: -1;
   }
   .header__logo {
@@ -262,6 +262,7 @@
     top: 15%;
     margin: 0px 15px;
     font-size: 25px;
+
   }
   .btn__mobile {
     display: block;
@@ -329,23 +330,23 @@
       justify-content: flex-start;
       gap: 3%;
     }
-    &__mobile {
+    &__mobile{
       flex-direction: column;
     }
   }
-
+ 
   .masters-inner {
     flex-direction: column;
     align-items: center;
 
-    &__item {
+    &__item{
       margin: 10px;
     }
-    &__desc {
+    &__desc{
       text-align: center;
     }
   }
-
+ 
   .portfolio-header__arrows {
     right: 20px;
     top: 85px;
