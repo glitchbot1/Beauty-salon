@@ -22,6 +22,9 @@
     font-size: 24px;
     font-weight: 700;
   }
+  &__hamb {
+    display: none;
+  }
 }
 
 .navigation__link {
@@ -242,24 +245,13 @@
   &__link {
     white-space: pre;
   }
-  &__link:first-child {
-    color: $green;
-    border-bottom: 2px solid $green;
-    cursor: pointer;
-    transition: 0.2s color;
-  }
-
-  &__link:hover {
-    color: $green;
-    cursor: pointer;
-    transition: 0.2s color;
-  }
 }
 
 .price-table {
-  display: flex;
+  display: none;
   justify-content: space-between;
   padding-top: 30px;
+  transition: 0.4s;
 
   &__item {
     min-width: 440px;
@@ -278,6 +270,9 @@
     font-weight: 400;
     font-size: 14px;
   }
+}
+.price-table:nth-child(2) {
+  display: flex;
 }
 .table-price {
   font-weight: 600;
@@ -383,26 +378,23 @@
   }
 }
 .portfolio-inner {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   padding-top: 50px;
-  overflow: hidden;
-  gap: 30px;
 }
 .portfolio-inner__item {
   position: relative;
   border-radius: 10px;
   cursor: pointer;
   transition: top 0.2s;
+  max-width: 340px;
 
   &::before {
     content: "";
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
+    width: 100%;
     left: 0;
     right: 0;
-    bottom: 5px;
+    bottom: 0;
     top: 0;
     border-radius: 10px;
     display: none;

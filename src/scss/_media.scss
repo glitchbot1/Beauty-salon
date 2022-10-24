@@ -9,6 +9,8 @@
     position: absolute;
     top: 45%;
     cursor: pointer;
+    display: block;
+    z-index: 2;
   }
   .hamb__inner {
     width: 40px;
@@ -41,7 +43,31 @@
       right: -1px;
     }
   }
-
+  .header__nav {
+    background-color: $white;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .navigation__link {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 10%;
+    font-size: 35px;
+    font-weight: 500;
+    padding: 0 20px 0 0;
+    transition: 0.15s color;
+  }
+  .header-phone__time {
+    z-index: -1;
+  }
   .header__logo {
     position: relative;
     left: 9%;
@@ -171,6 +197,7 @@
     top: 30%;
     left: 0;
     z-index: 2;
+    display: block;
   }
   .hamb__inner {
     width: 40px;
@@ -235,7 +262,6 @@
     top: 15%;
     margin: 0px 15px;
     font-size: 25px;
-
   }
   .btn__mobile {
     display: block;
@@ -303,23 +329,23 @@
       justify-content: flex-start;
       gap: 3%;
     }
-    &__mobile{
+    &__mobile {
       flex-direction: column;
     }
   }
- 
+
   .masters-inner {
     flex-direction: column;
     align-items: center;
 
-    &__item{
+    &__item {
       margin: 10px;
     }
-    &__desc{
+    &__desc {
       text-align: center;
     }
   }
- 
+
   .portfolio-header__arrows {
     right: 20px;
     top: 85px;

@@ -50,3 +50,15 @@ a {
   line-height: 59px;
   width: 540px;
 }
+.about-salon__yuotub {
+  cursor: pointer;
+}
+.active {
+  display: block;
+}
+.active-link {
+  color: $green;
+  border-bottom: 2px solid $green;
+  cursor: pointer;
+  transition: 0.2s color;
+}
