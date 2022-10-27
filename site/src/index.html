@@ -642,6 +642,7 @@
   </div>
   </div>
     <form class="fancybox" style="display:none;" id="extended-form" >
+      <span id="message"></span>
       <label for="name">
         Ваше имя:
         <input type="name" name="name" id="name" class="extended-form__input" placeholder="Иван Иванов" required>
@@ -675,9 +676,10 @@
         <input class="extended-form__input"  name="visitDate" type="date" id="date">
       </label>
       <button type="submit" class="btn" id="create-order">Записаться</button>
-      <span id="message"></span>
+   
+      <div id="loader" class="hidden">Отправляем...</div>
     </form>
-    <p id="message" style="display:hidden;">This is an awesome message!</p>
+  
   <script src="js/main.min.js" defer></script>
 </body>
 

@@ -146,13 +146,39 @@ async function getOrder() {
 
   const orders = await ApiServices.getOrders(access_token);
 }
+
+function toggleLoader() {
+  const loader = document.getElementById("loader");
+  loader.classList.toggle("hidden");
+}
+function onSuccess(formNode) {
+  alert("Ваша заявка отправлена!");
+  formNode.classList.toggle("hidden");
+}
+function onError() {
+  alert("Ошибка");
+}
 async function createOrder(event) {
   event.preventDefault();
+
   const myFormData = new FormData(event.target);
   const orders = {};
   myFormData.forEach((value, key) => (orders[key] = value));
-  const createOrders = await ApiServices.postOrders(orders);
 
-  console.log(orders);
+  toggleLoader();
+  const createOrders = await ApiServices.postOrders(orders);
+  toggleLoader();
+
+  // if (createOrders === 201) {
+    
+  //   console.log(1)
+  //   onSuccess(event.target);
+
+  // } else {
+  //   console.log(2)
+  //   onError();
+  // }
+
+  // console.log(orders);
 }
 extendForm.addEventListener("submit", createOrder);

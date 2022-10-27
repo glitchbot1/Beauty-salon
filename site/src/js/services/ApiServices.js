@@ -20,7 +20,20 @@ class ApiServices extends HttpServices {
       headers: {
         "Content-Type": "application/json",
       },
-    }).then((respons) => respons.json());
+    })
+.then((json) => {
+        if(json === 201){
+            alert('успех')
+        }
+            // console.log(json)
+        // console.log(alert('ваша заявка принята'))
+        let message = document.getElementById('message');
+        message.innerText = 'Ваша заявка отправлена! В ближайшее время с вами свяжется менеджер';
+        console.log(message)
+        //     console.log(message)
+        //    
+    })
+    .catch(err => console.log('ошибка'));
   }
 }
 
