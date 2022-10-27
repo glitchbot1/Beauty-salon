@@ -135,51 +135,24 @@ maskPnone.mask(inputPnone);
 
 const API_PATH = "https://beauty-saloon-server.herokuapp.com/api";
 
-// const order = {
-//   name: "Иван Иванович",
-//   phone: "+7 (999) 999-99-99"
-// };
-
 const btnCreateOrder = document.getElementById("create-order");
 const extendForm = document.getElementById("extended-form");
 
-// async function serializeForm(event) {
-
-  
-//   event.preventDefault();
-
-//   const myFormData = new FormData(event.target);
-//   const orders = {};
-
-//   myFormData.forEach((value, key) => (orders[key] = value));
-
-//   orders =  await ApiServices.getOrders(access_token);
-//   const response = createOrder(orders);
-//   console.log(orders);
-// }
-
-// async function createOrder(orders) {
-//   return await fetch(`${API_PATH}/orders`, {
-//     method: "POST",
-//     body: JSON.stringify(orders),
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//   }).then(() => {
-//     console.log("successful");
-//   });
-// }
-
-
-async function sendOrder(event) {
-
-  event.preventDefault();
+async function getOrder() {
   const { access_token } = await ApiServices.login({
-    userName: 'admin',
-    password: 'admin'
+    userName: "admin",
+    password: "admin",
   });
 
   const orders = await ApiServices.getOrders(access_token);
-  console.log(orders)
 }
-extendForm.addEventListener("submit", sendOrder);
+async function createOrder(event) {
+  event.preventDefault();
+  const myFormData = new FormData(event.target);
+  const orders = {};
+  myFormData.forEach((value, key) => (orders[key] = value));
+  const createOrders = await ApiServices.postOrders(orders);
+
+  console.log(orders);
+}
+extendForm.addEventListener("submit", createOrder);

@@ -644,7 +644,7 @@
     <form class="fancybox" style="display:none;" id="extended-form" >
       <label for="name">
         Ваше имя:
-        <input type="name" name="username" id="name" class="extended-form__input" placeholder="Иван Иванов" required>
+        <input type="name" name="name" id="name" class="extended-form__input" placeholder="Иван Иванов" required>
       </label>
       <label for="phone">
         Номер телефона: 
@@ -652,27 +652,27 @@
       </label>
       <label for="masters">
         Выберите мастера 
-        <select class="extended-form__input" name="" id="masters">
-          <option value="" >Краснова Ирина</option>
-          <option value="" >Киселева Алина</option>
-          <option value="" >Краснова Ирина</option>
-          <option value="" >Иванова Елена</option>
+        <select class="extended-form__input" name="masterId" id="masters">
+          <option value="1" >Краснова Ирина</option>
+          <option value="2" >Киселева Алина</option>
+          <option value="3" >Краснова Ирина</option>
+          <option value="4" >Иванова Елена</option>
         </select>
       </label>
       <label  for="services">
         Выберите услугу 
-        <select class="extended-form__input" name="" id="services">
-          <option value="">Стрижка и укладка</option>
-          <option value="">Косметология</option>
-          <option value="">Маникюр и педикюр</option>
-          <option value="">Макияж</option>
-          <option value="">Брови и ресницы</option>
-          <option value="">Массаж</option>
+        <select class="extended-form__input" name="serviceId" id="services">
+          <option value="1">Стрижка и укладка</option>
+          <option value="2">Косметология</option>
+          <option value="3">Маникюр и педикюр</option>
+          <option value="4">Макияж</option>
+          <option value="5">Брови и ресницы</option>
+          <option value="6">Массаж</option>
         </select>
       </label>
       <label for="date">
         Дата визита:
-        <input class="extended-form__input" type="date" id="date">
+        <input class="extended-form__input"  name="visitDate" type="date" id="date">
       </label>
       <button type="submit" class="btn" id="create-order">Записаться</button>
       <span id="message"></span>
