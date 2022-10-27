@@ -555,4 +555,23 @@
     transition: 0.15s color;
   }
 }
+#extended-form {
+  display: flex;
+  flex-direction: column;
+}
+.extended-form__input{
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  display: block;
+  font-size: 14px;
+  height: 44px;
+  margin: 20px 0;
+  outline: none;
+  padding: 11px;
+  width: 275px;
+}
+input.error {
+  border: 1px solid red;
+}
+
 @import "media";

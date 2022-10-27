@@ -39,7 +39,9 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^4.0.31",
+    "inputmask": "^5.0.7",
     "jquery": "^3.6.1",
+    "jquery-validation": "^1.19.5",
     "js-tabs": "^1.0.1",
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1"

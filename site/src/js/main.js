@@ -1,6 +1,13 @@
 import "slick-carousel/slick/slick";
 import $ from "jquery";
+import "jquery-validation";
 import "@fancyapps/ui";
+import Inputmask from "inputmask";
+import ApiServices from "./services/ApiServices";
+const onClickImageYouTub = document.querySelector(".about-salon__yuotub");
+const contactForm = document.querySelector("#record-form");
+const link = Array.from(document.querySelectorAll(".price-header__link"));
+const content = Array.from(document.querySelectorAll(".price-table"));
 
 function slickSlider() {
   $(".portfolio-inner").slick({
@@ -32,16 +39,13 @@ function slickSlider() {
 slickSlider();
 
 // По клику на элемент открывается youtub
-const onClickImageYouTub = document.querySelector(".about-salon__yuotub");
 
 onClickImageYouTub.addEventListener("click", onRedirectYouTub);
-
 function onRedirectYouTub() {
   window.location.href = "https://www.youtube.com/";
 }
 
 // Сбор данных в консоль
-let contactForm = document.querySelector("#record-form");
 
 //отправка данных без перезагрузки
 function handlerFormSubmit(event) {
@@ -62,8 +66,6 @@ function getDataForm(formNode) {
 contactForm.addEventListener("submit", handlerFormSubmit);
 
 //оживление табов
-const link = Array.from(document.querySelectorAll(".price-header__link"));
-const content = Array.from(document.querySelectorAll(".price-table"));
 
 link[0].classList.add("active-link");
 content[0].classList.add("active");
@@ -99,9 +101,6 @@ function chengeContent(index) {
 }
 
 //Меню бургер
-const mobileNav = document.querySelector(".header__nav");
-mobileNav.style.display = "none";
-
 $(document).ready(function () {
   $(".hamb__inner").click(function (event) {
     $(".header__nav").toggle();
@@ -109,4 +108,78 @@ $(document).ready(function () {
   $(".navigation__link").click(function (event) {
     $(".header__nav").hide();
   });
+  //валидация полей формы
+  $("#extended-form").validate({
+    rules: {
+      username: "required",
+      phone: "required",
+    },
+    messages: {
+      username: "Поле 'Имя' обязательно к заполнению",
+      phone: "Поле 'Телефон' обязательно к заполнению",
+    },
+  });
+  $(".error").addClass("error");
 });
+
+function closeExtendForm() {
+  setTimeout(function () {
+    jQuery(".fancybox__slide").hide();
+  }, 3500);
+}
+
+// inputmaska
+let inputPnone = document.getElementById("phone");
+let maskPnone = new Inputmask("+7 (999) 999-99-99");
+maskPnone.mask(inputPnone);
+
+const API_PATH = "https://beauty-saloon-server.herokuapp.com/api";
+
+// const order = {
+//   name: "Иван Иванович",
+//   phone: "+7 (999) 999-99-99"
+// };
+
+const btnCreateOrder = document.getElementById("create-order");
+const extendForm = document.getElementById("extended-form");
+
+// async function serializeForm(event) {
+
+  
+//   event.preventDefault();
+
+//   const myFormData = new FormData(event.target);
+//   const orders = {};
+
+//   myFormData.forEach((value, key) => (orders[key] = value));
+
+//   orders =  await ApiServices.getOrders(access_token);
+//   const response = createOrder(orders);
+//   console.log(orders);
+// }
+
+// async function createOrder(orders) {
+//   return await fetch(`${API_PATH}/orders`, {
+//     method: "POST",
+//     body: JSON.stringify(orders),
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   }).then(() => {
+//     console.log("successful");
+//   });
+// }
+
+
+async function sendOrder(event) {
+
+  event.preventDefault();
+  const { access_token } = await ApiServices.login({
+    userName: 'admin',
+    password: 'admin'
+  });
+
+  const orders = await ApiServices.getOrders(access_token);
+  console.log(orders)
+}
+extendForm.addEventListener("submit", sendOrder);

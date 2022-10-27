@@ -27,7 +27,7 @@
             <span class="hamb__inner"></span>
           </div>
           <a href="/" class=" header__logo logo">Мир красоты</a>
-          <nav class="navigation header__nav ">
+          <nav class="navigation header__nav">
             <a class="navigation__link" href="#services">Услуги и цены</a>
             <a class="navigation__link" href="#masters">Мастера</a>
             <a class="navigation__link" href="#portfolio">Наши работы</a>
@@ -612,8 +612,7 @@
                   подробности и согласует время.
                 </p>
                 <input class="contacts-form__input" name="name" id="name" type="text" placeholder="Ваше имя" required>
-                <input class="contacts-form__input" name="tel" id="tel" type="tel" placeholder="+7 (___) ___-__-__"
-                  required>
+                <input class="contacts-form__input" name="tel" id="tel" type="tel" placeholder="+7 (___) ___-__-__" required>
                 <button class="contacts-form__btn btn">Записаться</button>
               </form>
               <p class="contacts-form__personal-data">Нажимая на кнопку вы соглашаетесь с <a class="contacts-form__link"
@@ -642,27 +641,27 @@
     </footer>
   </div>
   </div>
-    <form action="post" style="display:none;" id="extended-form">
+    <form class="fancybox" style="display:none;" id="extended-form" >
       <label for="name">
         Ваше имя:
-        <input type="name" id="name" placeholder="Иван Иванов">
+        <input type="name" name="username" id="name" class="extended-form__input" placeholder="Иван Иванов" required>
       </label>
       <label for="phone">
         Номер телефона: 
-        <input type="tel" id="phone" placeholder="+7(___)___-__-__">
+        <input type="tel" name="phone" id="phone" class="extended-form__input" placeholder="+7(___)___-__-__" required>
       </label>
       <label for="masters">
         Выберите мастера 
-        <select name="" id="masters">
+        <select class="extended-form__input" name="" id="masters">
           <option value="" >Краснова Ирина</option>
           <option value="" >Киселева Алина</option>
           <option value="" >Краснова Ирина</option>
           <option value="" >Иванова Елена</option>
         </select>
       </label>
-      <label for="services">
+      <label  for="services">
         Выберите услугу 
-        <select name="" id="services">
+        <select class="extended-form__input" name="" id="services">
           <option value="">Стрижка и укладка</option>
           <option value="">Косметология</option>
           <option value="">Маникюр и педикюр</option>
@@ -673,11 +672,12 @@
       </label>
       <label for="date">
         Дата визита:
-        <input type="date" id="date">
+        <input class="extended-form__input" type="date" id="date">
       </label>
-      <button>Записаться</button>
+      <button type="submit" class="btn" id="create-order">Записаться</button>
+      <span id="message"></span>
     </form>
-
+    <p id="message" style="display:hidden;">This is an awesome message!</p>
   <script src="js/main.min.js" defer></script>
 </body>
 

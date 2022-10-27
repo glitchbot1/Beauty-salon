@@ -258,6 +258,8 @@
     gap: 20px;
   }
   .navigation__link {
+    display: flex;
+    padding: 10px;
     position: relative;
     top: 15%;
     margin: 0px 15px;
