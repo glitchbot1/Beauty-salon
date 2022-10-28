@@ -111,7 +111,7 @@ $(document).ready(function () {
   //валидация полей формы
   $("#extended-form").validate({
     rules: {
-      username: "required",
+      name: "required",
       phone: "required",
     },
     messages: {
@@ -151,12 +151,11 @@ function toggleLoader() {
   const loader = document.getElementById("loader");
   loader.classList.toggle("hidden");
 }
-function onSuccess(formNode) {
-  alert("Ваша заявка отправлена!");
-  formNode.classList.toggle("hidden");
-}
-function onError() {
-  alert("Ошибка");
+function closeForm(){
+  const close = document.querySelector(".fancybox__container");
+  const closeForm = document.querySelector("#extend-form");
+  close.style.display ='none';
+  closeForm.style.display ='none';
 }
 async function createOrder(event) {
   event.preventDefault();
@@ -165,20 +164,13 @@ async function createOrder(event) {
   const orders = {};
   myFormData.forEach((value, key) => (orders[key] = value));
 
-  toggleLoader();
-  const createOrders = await ApiServices.postOrders(orders);
-  toggleLoader();
+  const createOrders = await ApiServices.postOrders(orders, toggleLoader);
+  if( createOrders === 201){
+    setTimeout(closeForm, 3000)
+  }
+  else{
+    alert("Форма не заполнена")
+  }
 
-  // if (createOrders === 201) {
-    
-  //   console.log(1)
-  //   onSuccess(event.target);
-
-  // } else {
-  //   console.log(2)
-  //   onError();
-  // }
-
-  // console.log(orders);
 }
 extendForm.addEventListener("submit", createOrder);

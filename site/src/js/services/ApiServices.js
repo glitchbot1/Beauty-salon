@@ -13,7 +13,8 @@ class ApiServices extends HttpServices {
       },
     }).then((respons) => respons.json());
   }
-  postOrders(orders) {
+  postOrders(orders, toggleLoader) {
+    toggleLoader();
     return fetch(`${API_PATH}/orders`, {
       method: "POST",
       body: JSON.stringify(orders),
@@ -21,19 +22,14 @@ class ApiServices extends HttpServices {
         "Content-Type": "application/json",
       },
     })
-.then((json) => {
-        if(json === 201){
-            alert('успех')
-        }
-            // console.log(json)
-        // console.log(alert('ваша заявка принята'))
-        let message = document.getElementById('message');
-        message.innerText = 'Ваша заявка отправлена! В ближайшее время с вами свяжется менеджер';
-        console.log(message)
-        //     console.log(message)
-        //    
-    })
-    .catch(err => console.log('ошибка'));
+      .then((respons) => {
+        toggleLoader();
+        let message = document.getElementById("message");
+        message.innerText =
+          "Ваша заявка отправлена! В ближайшее время с вами свяжется менеджер";
+        return respons.status;
+      })
+      .catch((err) => console.log("ошибка"));
   }
 }
 
