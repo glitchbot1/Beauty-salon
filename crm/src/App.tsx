@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useMemo } from "react";
+import "./App.css";
 
+import { EmployeeCard } from "./components/EmployeeCard";
+import { AuthForm } from "./components/AuthForm";
+import { useAuth } from "./context/AuthContext";
+import ButtonAppBar from "./components/ButtonAppBar";
+import FixedContainer from "./components/FixedContainer";
 function App() {
+  const { isAuth, login, logout } = useAuth();
+  const employee = useMemo<any[]>(() => {
+    return [
+      {
+        id: 1,
+        photo:
+          "https://i.pinimg.com/736x/f8/c8/1d/f8c81d920fb1d9756b766300c9bbc78e.jpg",
+        name: "Анжела",
+        position: "Маникюрщица",
+      },
+    ];
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+  <ButtonAppBar/>
+ < FixedContainer />
+      {/* {isAuth && <button onClick={logout}>Logout</button>}
+
+      {isAuth ? (
+        employee.map((employee) => (
+          <EmployeeCard key={employee.id} employee={employee} />
+        ))
+      ) : (
+        <AuthForm onLogin={login} />
+      )} */}
     </div>
   );
 }
