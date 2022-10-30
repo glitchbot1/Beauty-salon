@@ -23,7 +23,7 @@
     font-weight: 700;
   }
   &__hamb {
-    display: none;
+    position: absolute;
   }
 }
 
@@ -576,4 +576,5 @@ input.error {
 .hidden {
   display: none;
 }
+
 @import "media";

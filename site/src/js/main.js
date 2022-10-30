@@ -19,6 +19,18 @@ function slickSlider() {
     nextArrow: ".slider-next",
     responsive: [
       {
+        breakpoint: 1500,
+        settings: {
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          infinite: true,
+        },
+      },
+      {
         breakpoint: 768,
         settings: {
           slidesToShow: 3,
@@ -31,6 +43,7 @@ function slickSlider() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: true,
         },
       },
     ],
