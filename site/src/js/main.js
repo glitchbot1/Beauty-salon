@@ -151,11 +151,11 @@ function toggleLoader() {
   const loader = document.getElementById("loader");
   loader.classList.toggle("hidden");
 }
-function closeForm(){
+function closeForm() {
   const close = document.querySelector(".fancybox__container");
   const closeForm = document.querySelector("#extend-form");
-  close.style.display ='none';
-  closeForm.style.display ='none';
+  close.style.display = "none";
+  closeForm.style.display = "none";
 }
 async function createOrder(event) {
   event.preventDefault();
@@ -165,12 +165,10 @@ async function createOrder(event) {
   myFormData.forEach((value, key) => (orders[key] = value));
 
   const createOrders = await ApiServices.postOrders(orders, toggleLoader);
-  if( createOrders === 201){
-    setTimeout(closeForm, 3000)
+  if (createOrders === 201) {
+    setTimeout(closeForm, 3000);
+  } else {
+    alert("Форма не заполнена");
   }
-  else{
-    alert("Форма не заполнена")
-  }
-
 }
 extendForm.addEventListener("submit", createOrder);

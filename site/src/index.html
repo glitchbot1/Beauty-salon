@@ -612,7 +612,8 @@
                   подробности и согласует время.
                 </p>
                 <input class="contacts-form__input" name="name" id="name" type="text" placeholder="Ваше имя" required>
-                <input class="contacts-form__input" name="tel" id="tel" type="tel" placeholder="+7 (___) ___-__-__" required>
+                <input class="contacts-form__input" name="tel" id="tel" type="tel" placeholder="+7 (___) ___-__-__"
+                  required>
                 <button class="contacts-form__btn btn">Записаться</button>
               </form>
               <p class="contacts-form__personal-data">Нажимая на кнопку вы соглашаетесь с <a class="contacts-form__link"
@@ -641,45 +642,45 @@
     </footer>
   </div>
   </div>
-    <form class="fancybox" style="display:none;" id="extended-form" >
-      <span id="message"></span>
-      <label for="name">
-        Ваше имя:
-        <input type="name" name="name" id="name" class="extended-form__input" placeholder="Иван Иванов" required>
-      </label>
-      <label for="phone">
-        Номер телефона: 
-        <input type="tel" name="phone" id="phone" class="extended-form__input" placeholder="+7(___)___-__-__" required>
-      </label>
-      <label for="masters">
-        Выберите мастера 
-        <select class="extended-form__input" name="masterId" id="masters">
-          <option value="1" >Краснова Ирина</option>
-          <option value="2" >Киселева Алина</option>
-          <option value="3" >Краснова Ирина</option>
-          <option value="4" >Иванова Елена</option>
-        </select>
-      </label>
-      <label  for="services">
-        Выберите услугу 
-        <select class="extended-form__input" name="serviceId" id="services">
-          <option value="1">Стрижка и укладка</option>
-          <option value="2">Косметология</option>
-          <option value="3">Маникюр и педикюр</option>
-          <option value="4">Макияж</option>
-          <option value="5">Брови и ресницы</option>
-          <option value="6">Массаж</option>
-        </select>
-      </label>
-      <label for="date">
-        Дата визита:
-        <input class="extended-form__input"  name="visitDate" type="date" id="date">
-      </label>
-      <button type="submit" class="btn" id="create-order">Записаться</button>
-   
-      <div id="loader" class="hidden">Отправляем...</div>
-    </form>
-  
+  <form class="fancybox" style="display:none;" id="extended-form">
+    <span id="message"></span>
+    <label for="name">
+      Ваше имя:
+      <input type="name" name="name" id="name" class="extended-form__input" placeholder="Иван Иванов" required>
+    </label>
+    <label for="phone">
+      Номер телефона:
+      <input type="tel" name="phone" id="phone" class="extended-form__input" placeholder="+7(___)___-__-__" required>
+    </label>
+    <label for="masters">
+      Выберите мастера
+      <select class="extended-form__input" name="masterId" id="masters">
+        <option value="1">Краснова Ирина</option>
+        <option value="2">Киселева Алина</option>
+        <option value="3">Краснова Ирина</option>
+        <option value="4">Иванова Елена</option>
+      </select>
+    </label>
+    <label for="services">
+      Выберите услугу
+      <select class="extended-form__input" name="serviceId" id="services">
+        <option value="1">Стрижка и укладка</option>
+        <option value="2">Косметология</option>
+        <option value="3">Маникюр и педикюр</option>
+        <option value="4">Макияж</option>
+        <option value="5">Брови и ресницы</option>
+        <option value="6">Массаж</option>
+      </select>
+    </label>
+    <label for="date">
+      Дата визита:
+      <input class="extended-form__input" name="visitDate" type="date" id="date">
+    </label>
+    <button type="submit" class="btn" id="create-order">Записаться</button>
+
+    <div id="loader" class="hidden">Отправляем...</div>
+  </form>
+
   <script src="js/main.min.js" defer></script>
 </body>
 
