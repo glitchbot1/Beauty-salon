@@ -1,5 +1,7 @@
 $green: #00bf78;
 $white: #ffffff;
+$blue: #278aff;
+$orange: #fb9475;
 
 *,
 *:after,
@@ -41,4 +43,10 @@ a {
   font-size: 14px;
   cursor: pointer;
   font-weight: 500;
+}
+.header-title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 59px;
+  width: 540px;
 }

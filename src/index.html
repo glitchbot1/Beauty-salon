@@ -61,7 +61,7 @@
       <section id="about" class="about-salon">
         <div class="container">
           <div class="about-salon__text">
-            <h2 class="about-salon__title">О салоне</h2>
+            <h2 class="about-salon__title header-title">О салоне</h2>
             <p class="about-salon__description">Мир красоты - это уютный салон в самом центре города. Здесь работают
               профессиональные визажисты, стилисты и
               мастера татуажа</p>
@@ -110,7 +110,7 @@
       <section id="services" class="services">
         <div class="container">
           <div class="services-header">
-            <h2 class="services-header__title">Популярные услуги</h2>
+            <h2 class="services-header__title header-title ">Популярные услуги</h2>
           </div>
 
           <div class="services__inner">
@@ -166,7 +166,7 @@
       <section id="services" class="price">
         <div class="container">
           <div class="price-header">
-            <h2 class="price-header__title">Услуги и цены</h2>
+            <h2 class="price-header__title header-title">Услуги и цены</h2>
             <nav class="price-header__navigation">
               <a class="price-header__link" href="">Стрижка и укладка</a>
               <a class="price-header__link" href="">Косметология</a>
@@ -231,7 +231,7 @@
       <section id="services" class="masters">
         <div class="container">
           <div class="masters-header">
-            <h2 class="masters-header__title">Мастера</h2>
+            <h2 class="masters-header__title header-title">Мастера</h2>
 
             <p class="masters-header__subtitle">Дружная команда настоящих профессионалов</p>
           </div>
@@ -289,25 +289,84 @@
       <section id="services" class="portfolio">
         <div class="container">
           <div class="portfolio-header">
-            <h2 class="portfolio-header__title">Наши работы</h2>
+            <h2 class="portfolio-header__title header-title ">Наши работы</h2>
+            <div class="portfolio-header__arrows">
+              <a class="portfolio-header__arrows portfolio-header__arrows-link portfolio-header__arrows_hover"><img class="portfolio-header__arrows-img" src="images/arrow-right.png" alt="Левая стрелка"></a> 
+              <a class="portfolio-header__arrows portfolio-header__arrows-link portfolio-header__arrows_hover"><img class="portfolio-header__arrows-img" src="images/arrow-left.png" alt="Правая стрелка"></a> 
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-inner">
+          <div class="portfolio-inner__item">
+            <img class="portfolio-item_img" src="images/portfolio-girl1.png" alt="Работа 1">
+          </div>
+          <div class="portfolio-inner__item">
+            <img class="portfolio-item_img" src="images/portfolio-girl2.png" alt="Работа 2">
+          </div>
+          <div class="portfolio-inner__item">
+            <img class="portfolio-item_img" src="images/portfolio-girl3.png" alt="Работа 3">
+          </div>
+          <div class="portfolio-inner__item">
+            <img class="portfolio-item_img" src="images/portfolio-girl4.png" alt="Работа 4">
+          </div>
+        </div>
 
+        <div class="container">
+          <h3 class="brands__subtitle">Бренды, которые мы используем в работе</h3>
+          <div class="brands-inner">
+            <div class="brands-inner__item">
+              <img src="images/wella.svg" alt=" Бренд wella ">
+            </div>
+            <div class="brands-inner__item">
+              <img src="images/shwarzkopf.svg" alt="Бренд shwarzkopf">
+            </div>
+            <div class="brands-inner__item">
+              <img src="images/tigi.svg" alt="Бренд tigi">
+            </div>
+            <div class="brands-inner__item">
+              <img src="images/londa.svg" alt="Бренд londa">
+            </div>
+            <div class="brands-inner__item">
+              <img src="images/nioxin.svg" alt="Бренд nioxin">
+            </div>
           </div>
 
-          <div class="section-inner"></div>
-
         </div>
+
       </section>
 
-      <section id="services" class="section">
+      <section id="services" class="contacts">
         <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">Контакты</h2>
-
+          <div class="contacts-inner">
+            <div class="contacts-inner__info">
+              <h2 class="header-title header-title__contacts ">Контакты</h2>
+              <p class="contacts-inner__connection"> Томск, проспект Ленина, дом 13
+                <a class="contacts-inner__tel" href="#">8 (499) 686-17-62</a>
+                <a class="contacts-inner__email" href="#">info@more-krasoty.ru</a>
+              </p>
+              <div class="contacts-social">
+                <h5 class="contacts-social__title">Мы в социальных сетях</h5>
+                <div class="contacts-social__icon">
+                  <a class="contacts-social__img"><img src="./images/icon-vk.png" alt="Вконтакте"></a>
+                  <a class="contacts-social__img"><img src="./images/icon-insta.png" alt="Инстаграм"></a>
+                  <a class="contacts-social__img"><img src="./images/icon-youtub.png" alt="Ютуб"></a>
+                </div>
+              </div>
+            </div>
+            <div class="contacts-form">
+              <form action="">
+                <h3 class="contacts-form__title">Быстрая запись</h3>
+                <p class="contacts-form__subtitle">Наш менеджер перезвонит в течение нескольких минут, уточнит
+                  подробности и согласует время.
+                </p>
+                <input class="contacts-form__input" type="text" placeholder="Ваше имя" required>
+                <input class="contacts-form__input" type="tel" placeholder="+7 (___) ___-__-__" required>
+                <button class="contacts-form__btn btn">Записаться</button>
+              </form>
+              <p class="contacts-form__personal-data">Нажимая на кнопку вы соглашаетесь с <a class="contacts-form__link"
+                  href="#">обработкой персональных данных</a> </p>
+            </div>
           </div>
-
-          <div class="section-inner"></div>
-
-        </div>
       </section>
     </main>
     <footer class="footer">
