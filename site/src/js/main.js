@@ -60,23 +60,16 @@ function onRedirectYouTub() {
 
 // Сбор данных в консоль
 
-//отправка данных без перезагрузки
-function handlerFormSubmit(event) {
-  event.preventDefault();
-  getDataForm(contactForm);
-}
+
 // данные с формы
-function getDataForm(formNode) {
-  let elements = formNode;
-  let data = Array.from(elements)
-    .filter((item) => !!item.name)
-    .map((element) => {
-      const { name, value } = element;
-      return { name, value };
-    });
-  console.log(data);
+function getDataForm(event) { 
+  event.preventDefault();
+  const formData = new FormData(contactForm);
+  const values = Object.fromEntries(formData.entries());
+
+  console.log(values)
 }
-contactForm.addEventListener("submit", handlerFormSubmit);
+contactForm.addEventListener("submit", getDataForm);
 
 //оживление табов
 
