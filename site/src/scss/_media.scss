@@ -184,6 +184,9 @@
   section {
     padding: 15px 0;
   }
+  .header-title {
+    width: fit-content;
+  }
   .header-center {
     display: none;
   }
@@ -329,10 +332,17 @@
 
     &__title {
       justify-content: flex-start;
-      gap: 3%;
+      gap: 10%;
+      width: 360px;
+    }
+    &__desc {
+      width: fit-content;
     }
     &__mobile {
       flex-direction: column;
+    }
+    &__item {
+      min-width: 350px;
     }
   }
 
