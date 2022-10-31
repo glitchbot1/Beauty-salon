@@ -141,9 +141,9 @@
   .price-header__navigation {
     gap: 16px;
   }
-  .price-header__link:first-child {
+  .price-header__link {
     color: #00bf78;
-    width: 141px;
+    width: fit-content;
   }
   .masters-inner {
     flex-flow: wrap;
@@ -321,8 +321,8 @@
   .price-header__navigation {
     flex-direction: column;
   }
-  .price-header__link:first-child {
-    width: 140px;
+  .price-header__link {
+    width: fit-content;
   }
   .price-table {
     flex-direction: column;
