@@ -60,14 +60,12 @@ function onRedirectYouTub() {
 
 // Сбор данных в консоль
 
-
 // данные с формы
-function getDataForm(event) { 
+function getDataForm(event) {
   event.preventDefault();
   const formData = new FormData(contactForm);
   const values = Object.fromEntries(formData.entries());
-
-  console.log(values)
+  console.log(values);
 }
 contactForm.addEventListener("submit", getDataForm);
 

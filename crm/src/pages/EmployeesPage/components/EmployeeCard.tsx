@@ -1,11 +1,12 @@
-import React from "react";
+  import React from "react";
+import {StaffDto} from "../../../common/interfaces/EmployeesInterfaces";
 
 interface EmployeeCardProps{
-    employee:any;
+    employee:StaffDto;
 }
 
 export function EmployeeCard(props:EmployeeCardProps) {
-    const {photo , name , position} = props.employee;
+    const {photo , fullName , position} = props.employee;
     
   return (
     <div className="employee-card">
@@ -18,7 +19,7 @@ export function EmployeeCard(props:EmployeeCardProps) {
         src={photo} />
       </div>
       <div className="employee-card__name">
-      {name}
+      {fullName}
       </div>
       <p className="employee-card__position"> {position}</p>
       <button >Подробнее</button>

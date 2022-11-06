@@ -1,37 +1,33 @@
 import React, { useMemo } from "react";
 import "./App.css";
-
-import { EmployeeCard } from "./components/EmployeeCard";
-import { AuthForm } from "./components/AuthForm";
+import { Outlet, Link, Navigate} from "react-router-dom";
 import { useAuth } from "./context/AuthContext";
 import ButtonAppBar from "./components/ButtonAppBar";
 import FixedContainer from "./components/FixedContainer";
-function App() {
-  const { isAuth, login, logout } = useAuth();
-  const employee = useMemo<any[]>(() => {
-    return [
-      {
-        id: 1,
-        photo:
-          "https://i.pinimg.com/736x/f8/c8/1d/f8c81d920fb1d9756b766300c9bbc78e.jpg",
-        name: "Анжела",
-        position: "Маникюрщица",
-      },
-    ];
-  }, []);
-  return (
-    <div>
-  <ButtonAppBar/>
- < FixedContainer />
-      {/* {isAuth && <button onClick={logout}>Logout</button>}
 
-      {isAuth ? (
-        employee.map((employee) => (
-          <EmployeeCard key={employee.id} employee={employee} />
-        ))
-      ) : (
-        <AuthForm onLogin={login} />
-      )} */}
+function App() {
+  const { isAuth, logout } = useAuth();
+
+  if (!isAuth) {
+    return <Navigate to="/login" />;
+  }
+
+  return (
+    <div className="App">
+      {isAuth && (
+        <header>
+          <nav>
+            <ul>
+              <li><Link to="/orders">Записи</Link></li>
+              <li><Link to="/employees">Сотрудники</Link></li>
+            </ul>
+          </nav>
+
+          <button onClick={logout}>Logout</button>
+        </header>
+      )}
+
+      <Outlet />
     </div>
   );
 }

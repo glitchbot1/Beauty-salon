@@ -1,5 +1,6 @@
-import { FormEventHandler, useState, useRef, useEffect } from "react";
-import { AuthData } from "../common/interfaces/AuthData";
+import { FormEventHandler, useState, useRef } from "react";
+import { AuthData } from "../../../common/interfaces/AuthData";
+
 
 interface AuthFormProps {
     onLogin: (authData: AuthData) => void;
