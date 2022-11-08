@@ -14,7 +14,7 @@ import { AuthProvider } from './context/AuthContext';
 import { LoginPage } from './pages/LoginPage/LoginPage';
 import { OrderPage } from './pages/OrderPage/OrderPage';
 import { EmployeesPage } from './pages/EmployeesPage/EmployeesPage';
-
+import 'antd/dist/antd.css';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

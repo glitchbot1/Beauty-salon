@@ -1,7 +1,7 @@
 import TokenService from './TokenServices';
 import PubSub from './PubSub';
 import { API_PATH } from '../constants';
-
+import axios from 'axios'
 export class HttpService {
   private baseApi: string = '';
 
@@ -32,6 +32,24 @@ export class HttpService {
 
     return this._handleResponse(response);
   }
+
+
+  
+    async delete(path:string){
+   
+     const res = await axios.delete(`${this.baseApi}/${path}`,{
+      headers: this.baseHeaders
+     })
+
+    
+      
+    
+     
+     
+    }
+
+  
+  
 
   private async _handleResponse(response: Response) {
     const parsedData = await response.json();
