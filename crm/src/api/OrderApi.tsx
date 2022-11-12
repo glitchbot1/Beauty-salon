@@ -13,8 +13,8 @@ class OrderApi extends HttpService{
     remove(orderId:number){
         return this.delete(`${orderId}`);
     }
-    create(){
-        return this.post('', {});
+    create(data:any){
+        return this.post('', data);
     }
     closeOrder(orderId:number){
         // return this.patch(`close/${orderId}`);

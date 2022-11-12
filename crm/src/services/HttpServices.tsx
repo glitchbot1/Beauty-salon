@@ -41,11 +41,6 @@ export class HttpService {
       headers: this.baseHeaders
      })
 
-    
-      
-    
-     
-     
     }
 
   
